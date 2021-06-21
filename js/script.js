@@ -206,7 +206,8 @@ function setInternet(slide) {
     const speed = currentSlider.find('.internet-speed').text();
     console.log('internet', name, price, speed);
     jQuery('#internet').val(name);
-    jQuery('.total__price').text(parseFloat(currentSlider.find('.internet-price').text()) + parseFloat(jQuery('.tv-slider .slick-active').find('.tv-price').text()))
+    let total = (parseFloat(currentSlider.find('.internet-price').text()) + parseFloat(jQuery('.tv-slider .slick-active').find('.tv-price').text())).toFixed(2);
+    jQuery('.total__price').text(total);
 }
 
 function setTv(slide) {
@@ -216,7 +217,8 @@ function setTv(slide) {
     const chanels = currentSlider.find('.tv-chanels').text();
     console.log('tv', name, price, chanels);
     jQuery('#tv').val(name);
-    jQuery('.total__price').text(parseFloat(jQuery('.internet-slider .slick-active').find('.internet-price').text()) + parseFloat(currentSlider.find('.tv-price').text()))
+    let total = (parseFloat(jQuery('.internet-slider .slick-active').find('.internet-price').text()) + parseFloat(currentSlider.find('.tv-price').text())).toFixed(2);
+    jQuery('.total__price').text(total);
 
 }
 
