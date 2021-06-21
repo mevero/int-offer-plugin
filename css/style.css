@@ -1,0 +1,147 @@
+.special-offer * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.special-offer label {
+  display: block;
+}
+
+.special-offer .slick-disabled {
+  display: none;
+}
+
+.special-offer .hidden-fields {
+  display: none;
+}
+
+.special-offer .slick-arrow {
+  background-color: transparent !important;
+}
+
+.special-offer__form-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.special-offer__form-footer button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+  display: none;
+}
+
+.special-offer__form-footer button:hover, .special-offer__form-footer button:focus {
+  background-color: transparent;
+  color: #000;
+}
+
+.special-offer .single-slide {
+  border: 2px solid #dedede;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.special-offer .single-slide__title, .special-offer .single-slide__subtitle, .special-offer .single-slide__price {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.special-offer .single-slide__title span, .special-offer .single-slide__subtitle span, .special-offer .single-slide__price span {
+  font-weight: bold;
+}
+
+.special-offer .single-slide__subtitle {
+  font-size: 1.5rem;
+}
+
+.special-offer .single-slide__subtitle span {
+  font-weight: normal;
+}
+
+.special-offer .single-slide__price {
+  font-size: 2rem;
+  color: #306995;
+  font-weight: 900;
+}
+
+.special-offer .total {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.special-offer .total__price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.special-offer .total h3 {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.special-offer .city__wrapper,
+.special-offer .streets__wrapper,
+.special-offer .numbers__wrapper {
+  margin-bottom: 1rem;
+}
+
+.special-offer .city__wrapper select,
+.special-offer .city__wrapper input,
+.special-offer .streets__wrapper select,
+.special-offer .streets__wrapper input,
+.special-offer .numbers__wrapper select,
+.special-offer .numbers__wrapper input {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  min-height: 43px;
+}
+
+.special-offer .city__wrapper select:disabled,
+.special-offer .city__wrapper input:disabled,
+.special-offer .streets__wrapper select:disabled,
+.special-offer .streets__wrapper input:disabled,
+.special-offer .numbers__wrapper select:disabled,
+.special-offer .numbers__wrapper input:disabled {
+  background-color: #dedede;
+  cursor: not-allowed;
+}
+
+.special-offer .streets__wrapper,
+.special-offer .numbers__wrapper {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

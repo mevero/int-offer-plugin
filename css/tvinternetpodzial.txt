@@ -1,0 +1,116 @@
+Internet (popc fiber)
+
+if [nazw uslugi] (25)
+	[cena internetu] (20) oraz [predkość usługi] (15)
+
+if [nazw uslugi] (26)
+	[cena internetu] (21) oraz [predkość usługi] (16)
+
+if [nazw uslugi] (27)
+	[cena internetu] (22) oraz [predkość usługi] (17)
+
+if [nazw uslugi] (28)
+	[cena internetu] (23) oraz [predkość usługi] (18)
+
+if [nazw uslugi] (29)
+	[cena internetu] (24) oraz [predkość usługi] (19)
+
+
+
+
+Internet (popc radio)
+
+if [nazw uslugi] (40)
+	[cena internetu] (35) oraz [predkość usługi] (30)
+
+if [nazw uslugi] (41)
+	[cena internetu] (36) oraz [predkość usługi] (31)
+
+if [nazw uslugi] (42)
+	[cena internetu] (37) oraz [predkość usługi] (32)
+
+if [nazw uslugi] (43)
+	[cena internetu] (38) oraz [predkość usługi] (33)
+
+if [nazw uslugi] (44)
+	[cena internetu] (39) oraz [predkość usługi] (34)
+
+
+
+
+Internet (htk radio)
+
+if [nazw uslugi] (55)
+	[cena internetu] (50) oraz [predkość usługi] (45)
+
+if [nazw uslugi] (56)
+	[cena internetu] (51) oraz [predkość usługi] (46)
+
+if [nazw uslugi] (57)
+	[cena internetu] (52) oraz [predkość usługi] (47)
+
+if [nazw uslugi] (58)
+	[cena internetu] (53) oraz [predkość usługi] (48)
+
+if [nazw uslugi] (59)
+	[cena internetu] (54) oraz [predkość usługi] (49)
+
+
+
+
+Internet (htk fiber)
+
+if [nazw uslugi] (70)
+	[cena internetu] (65) oraz [predkość usługi] (60)
+
+if [nazw uslugi] (72)
+	[cena internetu] (66) oraz [predkość usługi] (61)
+
+if [nazw uslugi] (73)
+	[cena internetu] (67) oraz [predkość usługi] (62)
+
+if [nazw uslugi] (74)
+	[cena internetu] (68) oraz [predkość usługi] (63)
+
+if [nazw uslugi] (75)
+	[cena internetu] (69) oraz [predkość usługi] (64)
+
+
+
+
+TV (dvbc)
+
+if [nazwa usługi] (85)
+	[cena pakietu] (80) oraz [ilość kanałów] (75)
+
+if [nazwa usługi] (86)
+	[cena pakietu] (81) oraz [ilość kanałów] (76)
+
+if [nazwa usługi] (87)
+	[cena pakietu] (82) oraz [ilość kanałów] (77)
+
+if [nazwa usługi] (88)
+	[cena pakietu] (83) oraz [ilość kanałów] (78)
+
+if [nazwa usługi] (89)
+	[cena pakietu] (84) oraz [ilość kanałów] (79)
+
+
+
+
+TV (iptv)
+
+if [nazwa usługi] (100)
+	[cena pakietu] (95) oraz [ilość kanałów] (90)
+
+if [nazwa usługi] (101)
+	[cena pakietu] (96) oraz [ilość kanałów] (91)
+
+if [nazwa usługi] (102)
+	[cena pakietu] (97) oraz [ilość kanałów] (92)
+
+if [nazwa usługi] (103)
+	[cena pakietu] (98) oraz [ilość kanałów] (93)
+
+if [nazwa usługi] (104)
+	[cena pakietu] (99) oraz [ilość kanałów] (94)

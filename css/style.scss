@@ -1,0 +1,135 @@
+.special-offer {
+    $primary-color: #306995;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    label {
+        display: block;
+    }
+
+    .slick-disabled {
+        display: none;
+    } 
+
+    .hidden-fields {
+        display: none;
+    } 
+
+    .slick-arrow {
+        background-color: transparent !important;
+    }
+
+    &__form-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: 2px solid #000;
+            background-color: #000;
+            color: #fff;
+            display: none;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: #000;
+            }
+        }
+    }
+
+    .single-slide {
+        border: 2px solid #dedede;
+        background-color: #fff;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        &__title,
+        &__subtitle,
+        &__price {
+            font-size: 2rem;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.5rem;
+
+            span {
+                font-weight: normal;
+            }
+        }
+
+        &__price {
+            font-size: 2rem;
+            color: $primary-color;
+            font-weight: 900;
+        }
+    }
+
+    .total {
+        background-color: #000;
+        color: #fff;
+        padding: 2rem;
+        margin-bottom: 1rem;
+
+        &__price-wrapper {
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            text-align: center;
+            display: block;
+            font-size: 1.5rem;
+        }
+    }
+
+    .city,
+    .streets,
+    .numbers {
+        &__wrapper {
+            margin-bottom: 1rem;
+
+            select, 
+            input {
+                display: block;
+                width: 100%;
+                border: 0;
+                outline: none;
+                padding: 0.5rem 1rem;
+                line-height: 1;
+                min-height: 43px;
+
+                &:disabled {
+                    background-color: #dedede;
+                    cursor: not-allowed;
+                }
+            }
+        }   
+    }
+
+    .streets,
+    .numbers {
+        &__wrapper {
+            display: none;
+        } 
+    }
+
+}
