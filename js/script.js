@@ -102,7 +102,10 @@ numbersSelect.addEventListener("change", () => {
 });
 
 document.querySelector('#bpc-reset').addEventListener('click', function () {
-    document.querySelector('.special-offer').reset();
+    document.querySelector('form').reset();
+    inputCity.value = '';
+    inputStreets.value = '';
+    numbersSelect.value = '';
     inputCity.disabled = false;
     inputStreets.disabled = false;
     numbersSelect.disabled = false;

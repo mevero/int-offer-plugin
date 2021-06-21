@@ -2,7 +2,7 @@
 0. Demo formularza http://labs.bpcoders.pl/oferta-internet/ - nie spamować, mam podpięty swój email
 1. zainstalować plugin contact form 7
 2. W miejscu gdzie ma wyświetlać się formularz wpisać shortcode [bpc_offer id="8"] gdzie ID ma być id formularza
-
+3. Ostylowanie formularza należy zrobić samemu pod dany wygląd strony - to samo tyczy się całego skryptu, jest to plugin więc może być użyty na wielu stronach o różnym designie.
 Kod formularza contact form zawierający odpowiednie dane
 
 <label> Twoje imię
