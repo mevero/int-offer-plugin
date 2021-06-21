@@ -1,5 +1,5 @@
 .special-offer {
-    $primary-color: #306995;
+    $primary-color: #36556d;
 
     * {
         margin: 0;
@@ -15,8 +15,17 @@
         display: none;
     } 
 
+    .slick-next:before, .slick-prev:before {
+        color: $primary-color;
+    }
+
     .hidden-fields {
         display: none;
+
+        + p {
+            display: flex;
+            justify-content: flex-end;
+        }
     } 
 
     .slick-arrow {
@@ -46,7 +55,7 @@
     }
 
     .single-slide {
-        border: 2px solid #dedede;
+        border: 2px solid $primary-color;
         background-color: #fff;
         padding: 1rem 1.5rem;
         margin-bottom: 1.5rem;
@@ -98,6 +107,8 @@
             text-align: center;
             display: block;
             font-size: 1.5rem;
+            line-height: 1.5rem;
+            color: #fff;
         }
     }
 
@@ -111,7 +122,7 @@
             input {
                 display: block;
                 width: 100%;
-                border: 0;
+                border: 2px solid $primary-color;
                 outline: none;
                 padding: 0.5rem 1rem;
                 line-height: 1;

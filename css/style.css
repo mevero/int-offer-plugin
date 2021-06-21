@@ -13,8 +13,21 @@
   display: none;
 }
 
+.special-offer .slick-next:before, .special-offer .slick-prev:before {
+  color: #36556d;
+}
+
 .special-offer .hidden-fields {
   display: none;
+}
+
+.special-offer .hidden-fields + p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .special-offer .slick-arrow {
@@ -47,7 +60,7 @@
 }
 
 .special-offer .single-slide {
-  border: 2px solid #dedede;
+  border: 2px solid #36556d;
   background-color: #fff;
   padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -81,7 +94,7 @@
 
 .special-offer .single-slide__price {
   font-size: 2rem;
-  color: #306995;
+  color: #36556d;
   font-weight: 900;
 }
 
@@ -107,6 +120,8 @@
   text-align: center;
   display: block;
   font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
 }
 
 .special-offer .city__wrapper,
@@ -123,7 +138,7 @@
 .special-offer .numbers__wrapper input {
   display: block;
   width: 100%;
-  border: 0;
+  border: 2px solid #36556d;
   outline: none;
   padding: 0.5rem 1rem;
   line-height: 1;
