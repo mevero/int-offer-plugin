@@ -144,3 +144,24 @@
     }
 
 }
+
+.additionals-offer {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    > div {
+        padding: 1rem;
+        display: grid;
+        place-items: center;
+        flex: 1;
+        background-color: pink;
+
+        &.active {
+            background-color: blue;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 0.5rem;
+        }
+    }
+}

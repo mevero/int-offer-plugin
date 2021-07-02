@@ -69,6 +69,9 @@ function bpc_offer_shortcode($atts)
       <h3 class="single-slide__price"><span class="tv-price">0</span> PLN</h3>
   </div>
         </div>
+
+        <div class="additionals-offer"></div>
+
         <div class="total">
             <h3>Wysokość abonamentu</h3>
             <div class="total__price-wrapper">

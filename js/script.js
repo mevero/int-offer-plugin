@@ -109,10 +109,16 @@ document.querySelector('#bpc-reset').addEventListener('click', function () {
     inputCity.disabled = false;
     inputStreets.disabled = false;
     numbersSelect.disabled = false;
-    streetsWrapper.style.display = 'none';
-    numbersWrapper.style.display = 'none';
-    jQuery('#bpc-reset').hide();
-    jQuery('.summary').hide();
+
+    removeSlides('internet-slider', 0, internetSlides);
+    removeSlides('tv-slider', 1, tvSlides);
+
+    // streetsWrapper.style.display = 'none';
+    // numbersWrapper.style.display = 'none';
+    // jQuery('#bpc-reset').hide();
+    // jQuery('.summary').hide();
+
+
 })
 
 function disableElement(element) {
@@ -158,10 +164,19 @@ function setSliders(data) {
     });
 
     tvOfferNames.forEach((el) => {
-        for (let c = 1; c < 6; c++) {
+        for (let c = 1; c < 3; c++) {
             if (data[`name-${el}-${c}`] !== '0') {
                 tvSlides++;
                 addTvSlide(data[`name-${el}-${c}`], data[`price-${el}-${c}`], data[`chanels-${el}-${c}`]);
+            }
+        }
+    });
+
+    tvOfferNames.forEach((el) => {
+        for (let c = 3; c < 6; c++) {
+            if (data[`name-${el}-${c}`] !== '0') {
+                tvSlides++;
+                setAdditionalOffer(data[`name-${el}-${c}`], data[`price-${el}-${c}`], data[`chanels-${el}-${c}`]);
             }
         }
     });
@@ -183,9 +198,14 @@ function addInternetSlide(name, price, speed) {
     `);
 }
 
-function removeSlides(slider, start, slides) {
-    for (start; start <= slides; start++) {
-        jQuery(`.${slider}`).slick('slickRemove', start);
+function removeSlides(slider, offset, slides) {
+    if (slider == 'tv-slider') {
+        jQuery(`.${slider}`).slick('slickRemove', 1);
+        jQuery(`.${slider}`).slick('slickRemove', 0);
+    } else {
+        for (let i = 0; i < (slides - offset); i++) {
+            jQuery(`.${slider}`).slick('slickRemove', i);
+        }
     }
 }
 
@@ -195,8 +215,17 @@ function addTvSlide(name, price, count) {
         <h2 class="single-slide__title">Telewizja <span class="tv-name">${name}</span></h2>
         <h3 class="single-slide__subtitle">Liczba kanałów w pakiecie: <span class="tv-chanels">${count}</span></h3>
         <h3 class="single-slide__price"><span class="tv-price">${price}</span> PLN</h3>
-    </div>
+    </div> 
     `, true);
+}
+
+function setAdditionalOffer(name, price, count) {
+    let content = `
+        <div class="additional-offer" data-name="${name}" data-price="${price}">
+        ${name} + ${price} + ${count}
+        </div>
+    `;
+    jQuery('.additionals-offer').append(content);
 }
 
 function setInternet(slide) {
@@ -204,7 +233,6 @@ function setInternet(slide) {
     const name = currentSlider.find('.internet-name').text();
     const price = parseFloat(currentSlider.find('.internet-price').text());
     const speed = currentSlider.find('.internet-speed').text();
-    console.log('internet', name, price, speed);
     jQuery('#internet').val(name);
     let total = (parseFloat(currentSlider.find('.internet-price').text()) + parseFloat(jQuery('.tv-slider .slick-active').find('.tv-price').text())).toFixed(2);
     jQuery('.total__price').text(total);
@@ -215,7 +243,6 @@ function setTv(slide) {
     const name = currentSlider.find('.tv-name').text();
     const price = parseFloat(currentSlider.find('.tv-price').text());
     const chanels = currentSlider.find('.tv-chanels').text();
-    console.log('tv', name, price, chanels);
     jQuery('#tv').val(name);
     let total = (parseFloat(jQuery('.internet-slider .slick-active').find('.internet-price').text()) + parseFloat(currentSlider.find('.tv-price').text())).toFixed(2);
     jQuery('.total__price').text(total);
@@ -228,4 +255,31 @@ internetSlider.on('afterChange', function (event, slick, currentSlide, nextSlide
 
 tvSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
     setTv(currentSlide)
+    jQuery('.additional-offer').removeClass('active');
+    if (currentSlide == 2) {
+        jQuery('.additionals-offer').hide();
+    } else {
+        jQuery('.additionals-offer').show();
+    }
 });
+
+jQuery('.additionals-offer').on('click', '.additional-offer', function () {
+    let price = parseFloat(jQuery(this).data('price'));
+    let totalPrice = parseFloat(jQuery('.total__price').text());
+    let offers = '';
+
+
+    if (jQuery(this).hasClass('active')) {
+        jQuery(this).removeClass('active');
+        jQuery('.total__price').text((totalPrice - price).toFixed(2))
+    } else {
+        jQuery(this).addClass('active');
+        jQuery('.total__price').text((totalPrice + price).toFixed(2))
+    }
+
+    jQuery('.additional-offer.active').each(function () {
+        offers += jQuery(this).data('name') + ' ';
+    })
+    console.log(offers);
+    jQuery('#oferty').val(offers)
+})
