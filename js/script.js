@@ -113,10 +113,10 @@ document.querySelector('#bpc-reset').addEventListener('click', function () {
     removeSlides('internet-slider', 0, internetSlides);
     removeSlides('tv-slider', 1, tvSlides);
 
-    // streetsWrapper.style.display = 'none';
-    // numbersWrapper.style.display = 'none';
-    // jQuery('#bpc-reset').hide();
-    // jQuery('.summary').hide();
+    streetsWrapper.style.display = 'none';
+    numbersWrapper.style.display = 'none';
+    jQuery('#bpc-reset').hide();
+    jQuery('.summary').hide();
 
 
 })
