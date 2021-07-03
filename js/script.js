@@ -15,7 +15,7 @@ const tvSlider = jQuery('.tv-slider');
 let internetSlides = 0;
 let tvSlides = 1;
 
-const sliderConfig = { infinite: false };
+const sliderConfig = {infinite: false};
 
 fetch(`${serverURL}/cities`)
     .then((res) => res.json())
@@ -199,12 +199,14 @@ function addInternetSlide(name, price, speed) {
 }
 
 function removeSlides(slider, offset, slides) {
+    const currentSlider = jQuery(`.${slider}`);
+
     if (slider == 'tv-slider') {
-        jQuery(`.${slider}`).slick('slickRemove', 1);
-        jQuery(`.${slider}`).slick('slickRemove', 0);
+        currentSlider.slick('slickRemove', 1);
+        currentSlider.slick('slickRemove', 0);
     } else {
         for (let i = 0; i < (slides - offset); i++) {
-            jQuery(`.${slider}`).slick('slickRemove', i);
+            currentSlider.slick('slickRemove', i);
         }
     }
 }
@@ -222,7 +224,9 @@ function addTvSlide(name, price, count) {
 function setAdditionalOffer(name, price, count) {
     let content = `
         <div class="additional-offer" data-name="${name}" data-price="${price}">
-        ${name} + ${price} + ${count}
+        <strong>${name}</strong>
+        <span>liczba kanałów: ${count}</span>
+        <span>${price} zł</span>
         </div>
     `;
     jQuery('.additionals-offer').append(content);

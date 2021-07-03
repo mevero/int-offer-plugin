@@ -165,3 +165,12 @@
         }
     }
 }
+
+.additional-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    justify-content: centerl
+}

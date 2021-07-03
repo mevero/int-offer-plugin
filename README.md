@@ -4,9 +4,8 @@
 2. W miejscu gdzie ma wyświetlać się formularz wpisać shortcode [bpc_offer id="8"] gdzie ID ma być id formularza
 3. Ostylowanie formularza należy zrobić samemu pod dany wygląd strony - to samo tyczy się całego skryptu, jest to plugin więc może być użyty na wielu stronach o różnym designie.
 Kod formularza contact form zawierający odpowiednie dane
-
-<label> Twoje imię
-    [text* your-name] </label>
+   <label> Twoje imię
+   [text* your-name] </label>
 
 <label> Twój email
     [email* your-email] </label>
@@ -22,6 +21,7 @@ Kod formularza contact form zawierający odpowiednie dane
 [text street id:street-form readonly]
 [text number id:number-form readonly]
 [text internet id:internet readonly]
+[text oferty id:oferty readonly]
 [text tv id:tv readonly]
 </div>
 [submit "Wyślij"]
@@ -40,6 +40,6 @@ Ulica: [street]
 Numer: [number]
 Internet: [internet]
 Telewizja: [tv]
-
--- 
-Ta wiadomość została wysłana przez formularz kontaktowy na stronie [_site_title] ([_site_url]).
+Dodatkowe oferty [oferty]
+--
+Ta wiadomość została wysłana przez formularz kontaktowy na stronie [_site_title] ([_site_url]).ysłana przez formularz kontaktowy na stronie [_site_title] ([_site_url]).
