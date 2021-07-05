@@ -15,7 +15,7 @@ const tvSlider = jQuery('.tv-slider');
 let internetSlides = 0;
 let tvSlides = 1;
 
-const sliderConfig = {infinite: false};
+const sliderConfig = { infinite: false };
 
 fetch(`${serverURL}/cities`)
     .then((res) => res.json())
@@ -117,8 +117,7 @@ document.querySelector('#bpc-reset').addEventListener('click', function () {
     numbersWrapper.style.display = 'none';
     jQuery('#bpc-reset').hide();
     jQuery('.summary').hide();
-
-
+    clearOffers();
 })
 
 function disableElement(element) {
@@ -175,7 +174,6 @@ function setSliders(data) {
     tvOfferNames.forEach((el) => {
         for (let c = 3; c < 6; c++) {
             if (data[`name-${el}-${c}`] !== '0') {
-                tvSlides++;
                 setAdditionalOffer(data[`name-${el}-${c}`], data[`price-${el}-${c}`], data[`chanels-${el}-${c}`]);
             }
         }
@@ -266,6 +264,11 @@ tvSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
         jQuery('.additionals-offer').show();
     }
 });
+
+function clearOffers() {
+    jQuery('.additionals-offer').find('.additional-offer').removeClass('.active');
+    jQuery('#oferty').val('');
+}
 
 jQuery('.additionals-offer').on('click', '.additional-offer', function () {
     let price = parseFloat(jQuery(this).data('price'));
