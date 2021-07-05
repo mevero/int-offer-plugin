@@ -172,5 +172,9 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.2s ease-in;
-    justify-content: centerl
+    justify-content: center;
+
+    &__price { 
+        text-transform: uppercase;
+    }
 }

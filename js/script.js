@@ -87,7 +87,6 @@ inputCity.addEventListener("change", (el) => {
 });
 
 inputStreets.addEventListener("change", () => {
-
     getNumbers(inputCity.value, inputStreets.value);
 });
 
@@ -187,11 +186,12 @@ internetSlider.slick(sliderConfig);
 tvSlider.slick(sliderConfig);
 
 function addInternetSlide(name, price, speed) {
+    const currentPrice = Number(price).toFixed(2);
     internetSlider.slick('slickAdd', `
       <div class="single-slide">
         <h2 class="single-slide__title">Internet <span class="internet-name">${name}</span></h2>
         <h3 class="single-slide__subtitle"><span class="internet-speed">${speed.replace('/', ' Mbps / ')} Mbps</span> </h3>
-        <h3 class="single-slide__price"><span class="internet-price">${price}</span> PLN</h3>
+        <h3 class="single-slide__price"><span class="internet-price">${currentPrice}</span> PLN</h3>
       </div>
     `);
 }
@@ -210,21 +210,23 @@ function removeSlides(slider, offset, slides) {
 }
 
 function addTvSlide(name, price, count) {
+    const currentPrice = Number(price).toFixed(2);
     tvSlider.slick('slickAdd', `
     <div class="single-slide">
         <h2 class="single-slide__title">Telewizja <span class="tv-name">${name}</span></h2>
         <h3 class="single-slide__subtitle">Liczba kanałów w pakiecie: <span class="tv-chanels">${count}</span></h3>
-        <h3 class="single-slide__price"><span class="tv-price">${price}</span> PLN</h3>
+        <h3 class="single-slide__price"><span class="tv-price">${currentPrice}</span> PLN</h3>
     </div> 
     `, true);
 }
 
 function setAdditionalOffer(name, price, count) {
+    const currentPrice = Number(price).toFixed(2);
     let content = `
         <div class="additional-offer" data-name="${name}" data-price="${price}">
         <strong>${name}</strong>
         <span>liczba kanałów: ${count}</span>
-        <span>${price} zł</span>
+        <span class="additional-offer__price">${currentPrice} PLN</span>
         </div>
     `;
     jQuery('.additionals-offer').append(content);
@@ -266,7 +268,7 @@ tvSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
 });
 
 function clearOffers() {
-    jQuery('.additionals-offer').find('.additional-offer').removeClass('.active');
+    jQuery('.additionals-offer').find('.additional-offer').remove();
     jQuery('#oferty').val('');
 }
 

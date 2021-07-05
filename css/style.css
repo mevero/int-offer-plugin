@@ -200,8 +200,12 @@
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  -webkit-box-pack: centerl;
-      -ms-flex-pack: centerl;
-          justify-content: centerl;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.additional-offer__price {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
