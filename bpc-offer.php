@@ -38,18 +38,24 @@ function bpc_offer_shortcode($atts)
     <div class="special-offer">
       <div class="special-offer__form">
         <div class="city__wrapper">
-          <label for="city">Wybierz miasto</label>
+        <div class="section-title">
+          <span>wybierz miejscowość</span>
+          </div>
           <input id="input-city" name="input-city" list="city">
           <datalist id="city"></datalist>
         </div>
 
         <div class="streets__wrapper">
-          <label for="streets">Wybierz ulicę</label>
+        <div class="section-title">
+        <span>wybierz ulicę</span>
+        </div>
           <input id="input-streets" name="input-streets" list="streets">
           <datalist id="streets"></datalist>
         </div>
         <div class="numbers__wrapper">
-          <label for="numbers">Wybierz numer</label>
+        <div class="section-title">
+        <span>wybierz numer</span>
+        </div>
           <select name="numbers" id="numbers" class="numbers" onchange="check_data(this)">
             <option disabled selected value></option>
           </select>
@@ -59,9 +65,14 @@ function bpc_offer_shortcode($atts)
         </div>
       </div>
         <div class="summary" style="display: none;">
+        <div class="section-title">
+        <span>wybierz prędkość internetu</span>
+        </div>
       <div class="internet-slider">
       </div>
-     
+      <div class="section-title">
+      <span>wybierz pakiet kanałów TV</span>
+      </div>
       <div class="tv-slider">
       <div class="single-slide">
       <h2 class="single-slide__title">Telewizja </h2>
@@ -69,7 +80,9 @@ function bpc_offer_shortcode($atts)
       <h3 class="single-slide__price"><span class="tv-price">0</span> PLN</h3>
   </div>
         </div>
-
+        <div class="section-title">
+        <span>Wybierz pakiety tematyczne</span>
+        </div>
         <div class="additionals-offer"></div>
 
         <div class="total">

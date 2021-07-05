@@ -42,7 +42,7 @@ const selectStreets = function (city) {
                 getNumbers(inputCity.value, 'null');
                 streetsWrapper.style.display = 'none';
             } else {
-                streetsWrapper.style.display = 'block';
+                streetsWrapper.style.display = 'flex';
                 document.querySelector('#streets').innerHTML =
                     "<option disabled selected value> -- select -- </option>";
                 data.forEach((el) => {
@@ -65,7 +65,7 @@ const getNumbers = function (city, street) {
                 return false;
             }
             disableElement(inputStreets);
-            numbersWrapper.style.display = 'block';
+            numbersWrapper.style.display = 'flex';
             numbersSelect.innerHTML =
                 "<option disabled selected value> -- select -- </option>";
             data.forEach((el) => {

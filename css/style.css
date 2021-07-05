@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-.special-offer label {
-  display: block;
-}
-
 .special-offer .slick-disabled {
   display: none;
 }
@@ -41,7 +37,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .special-offer__form-footer button {
@@ -60,10 +56,10 @@
 }
 
 .special-offer .single-slide {
-  border: 2px solid #36556d;
   background-color: #fff;
   padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,6 +67,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: inset 0px -3px 8px 0px #dedede;
+          box-shadow: inset 0px -3px 8px 0px #dedede;
 }
 
 .special-offer .single-slide__title, .special-offer .single-slide__subtitle, .special-offer .single-slide__price {
@@ -99,35 +97,71 @@
 }
 
 .special-offer .total {
-  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #36556d;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.special-offer .total h3 {
+  background-color: #36556d;
   color: #fff;
-  padding: 2rem;
-  margin-bottom: 1rem;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+  letter-spacing: 6px;
 }
 
 .special-offer .total__price-wrapper {
+  color: #36556d;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.special-offer .section-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 4rem;
-  font-weight: bold;
 }
 
-.special-offer .total h3 {
-  text-align: center;
-  display: block;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+.special-offer .section-title span {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #36556d;
   color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 0.5rem 2rem;
+  letter-spacing: 6px;
 }
 
 .special-offer .city__wrapper,
 .special-offer .streets__wrapper,
 .special-offer .numbers__wrapper {
   margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .special-offer .city__wrapper select,
@@ -137,12 +171,14 @@
 .special-offer .numbers__wrapper select,
 .special-offer .numbers__wrapper input {
   display: block;
+  border-radius: 0.25rem;
   width: 100%;
-  border: 2px solid #36556d;
   outline: none;
   padding: 0.5rem 1rem;
   line-height: 1;
   min-height: 43px;
+  -webkit-box-shadow: inset 0px -3px 8px 0px #dedede;
+          box-shadow: inset 0px -3px 8px 0px #dedede;
 }
 
 .special-offer .city__wrapper select:disabled,
@@ -165,21 +201,44 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.5rem;
+  position: relative;
+  top: -5px;
 }
 
 .additionals-offer > div {
-  padding: 1rem;
+  padding: 4rem 1rem 4rem 1rem;
   display: -ms-grid;
   display: grid;
+  grid-gap: 20px;
   place-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: pink;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px -3px 8px 0px #dedede;
+          box-shadow: inset 0px -3px 8px 0px #dedede;
 }
 
-.additionals-offer > div.active {
-  background-color: blue;
+.additionals-offer > div::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #36556d;
+  left: 50%;
+  top: 2rem;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.additionals-offer > div.active::after {
+  background-color: #36556d;
 }
 
 .additionals-offer > div:not(:last-of-type) {
