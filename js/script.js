@@ -262,8 +262,10 @@ tvSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
     jQuery('.additional-offer').removeClass('active');
     if (currentSlide == 2) {
         jQuery('.additionals-offer').hide();
+        jQuery('.additionals-offer').prev().hide()
     } else {
         jQuery('.additionals-offer').show();
+        jQuery('.additionals-offer').prev().show()
     }
 });
 

@@ -80,6 +80,7 @@ function bpc_offer_shortcode($atts)
       <h3 class="single-slide__price"><span class="tv-price">0</span> PLN</h3>
   </div>
         </div>
+        
         <div class="section-title">
         <span>Wybierz pakiety tematyczne</span>
         </div>
